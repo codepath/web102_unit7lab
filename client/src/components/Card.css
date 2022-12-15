@@ -1,0 +1,58 @@
+.Card {
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(153, 153, 153, 0.497);
+    border-radius: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    margin-bottom: 25px;
+    width: 400px;
+    text-align: center;
+}
+
+.title {
+    color:white;
+    padding-left:30px;
+    font-size: 24px;
+}
+
+.author {
+    color:white;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.description {
+    color:white;  
+    text-align: justify;
+    text-justify: inter-word;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.betButton {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    color:white;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+.betButton:hover {
+    border-color: #646cff;
+  }
+
+.moreButton {
+    width: 30px;
+    float:right;
+
+}
+.moreButton:hover {
+    cursor: pointer;
+}
