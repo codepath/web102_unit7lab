@@ -3,19 +3,31 @@ import './CreatePost.css'
 
 const CreatePost = () => {
 
+    const [post, setPost] = useState({title: "", author: "", description: ""})
+
+    const handleChange = (event) => {
+        const {name, value} = event.target;
+        setPost( (prev) => {
+            return {
+                ...prev,
+                [name]:value,
+            }
+        })
+    }
+
     return (
         <div>
             <form>
                 <label for="title">Title</label> <br />
-                <input type="text" id="title" name="title" /><br />
+                <input type="text" id="title" name="title" onChange={handleChange} /><br />
                 <br/>
 
                 <label for="author">Author</label><br />
-                <input type="text" id="author" name="author" /><br />
+                <input type="text" id="author" name="author" onChange={handleChange} /><br />
                 <br/>
 
                 <label for="description">Description</label><br />
-                <textarea rows="5" cols="50" id="description">
+                <textarea rows="5" cols="50" id="description" onChange={handleChange}>
                 </textarea>
                 <br/>
                 <input type="submit" value="Submit" />

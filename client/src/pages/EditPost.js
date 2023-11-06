@@ -5,21 +5,31 @@ import './EditPost.css'
 const EditPost = ({data}) => {
 
     const {id} = useParams();
-    const post = data.filter(item => item.id === id)[0];
+    const [post, setPost] = useState({id: null, title: "", author: "", description: ""});
+
+    const handleChange = (event) => {
+        const {name, value} = event.target;
+        setPost( (prev) => {
+            return {
+                ...prev,
+                [name]:value,
+            }
+        })
+    }
 
     return (
         <div>
             <form>
                 <label for="title">Title</label> <br />
-                <input type="text" id="title" name="title" value={post.title} /><br />
+                <input type="text" id="title" name="title" value={post.title} onChange={handleChange} /><br />
                 <br/>
 
                 <label for="author">Author</label><br />
-                <input type="text" id="author" name="author" value={post.author} /><br />
+                <input type="text" id="author" name="author" value={post.author} onChange={handleChange} /><br />
                 <br/>
 
                 <label for="description">Description</label><br />
-                <textarea rows="5" cols="50" id="description" value={post.description} >
+                <textarea rows="5" cols="50" id="description" value={post.description} onChange={handleChange} >
                 </textarea>
                 <br/>
                 <input type="submit" value="Submit" />
