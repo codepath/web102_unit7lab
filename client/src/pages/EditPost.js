@@ -18,6 +18,16 @@ const EditPost = ({data}) => {
         window.location = "/";
 
     }
+    const deletePost = async (event) => {
+        event.preventDefault();
+        await supabase
+            .from('Posts')
+            .delete()
+            .eq('id', id);
+
+        window.location = "/";
+
+    }
 
     const handleChange = (event) => {
         const {name, value} = event.target;
