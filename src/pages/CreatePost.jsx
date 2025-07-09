@@ -27,7 +27,7 @@ const CreatePost = () => {
                 <br/>
 
                 <label htmlFor="description">Description</label><br />
-                <textarea rows="5" cols="50" id="description" onChange={handleChange}>
+                <textarea rows="5" cols="50" id="description" name="description" onChange={handleChange}>
                 </textarea>
                 <br/>
                 <input type="submit" value="Submit" />
