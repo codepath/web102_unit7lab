@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react'
 import './CreatePost.css'
 
 const CreatePost = () => {
@@ -18,15 +18,15 @@ const CreatePost = () => {
     return (
         <div>
             <form>
-                <label for="title">Title</label> <br />
+                <label htmlFor="title">Title</label> <br />
                 <input type="text" id="title" name="title" onChange={handleChange} /><br />
                 <br/>
 
-                <label for="author">Author</label><br />
+                <label htmlFor="author">Author</label><br />
                 <input type="text" id="author" name="author" onChange={handleChange} /><br />
                 <br/>
 
-                <label for="description">Description</label><br />
+                <label htmlFor="description">Description</label><br />
                 <textarea rows="5" cols="50" id="description" onChange={handleChange}>
                 </textarea>
                 <br/>
