@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import Card from '../components/Card';
+import { useState, useEffect } from 'react'
+import Card from '../components/Card'
 
 const ReadPosts = (props) => {
 
-    const [posts, setPosts] = useState([]);
+    const [posts, setPosts] = useState([])
 
     useEffect(() => {
-        setPosts(props.data);
-    }, [props]);
+        setPosts(props.data)
+    }, [props])
     
     return (
         <div className="ReadPosts">
@@ -27,4 +27,4 @@ const ReadPosts = (props) => {
     )
 }
 
-export default ReadPosts;
+export default ReadPosts

@@ -1,14 +1,14 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import {useState} from 'react'
+import { useParams } from 'react-router-dom'
 import './EditPost.css'
 
 const EditPost = ({data}) => {
 
-    const {id} = useParams();
-    const [post, setPost] = useState({id: null, title: "", author: "", description: ""});
+    const {id} = useParams()
+    const [post, setPost] = useState({id: null, title: "", author: "", description: ""})
 
     const handleChange = (event) => {
-        const {name, value} = event.target;
+        const {name, value} = event.target
         setPost( (prev) => {
             return {
                 ...prev,

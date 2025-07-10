@@ -6,7 +6,7 @@ const CreatePost = () => {
     const [post, setPost] = useState({title: "", author: "", description: ""})
 
     const handleChange = (event) => {
-        const {name, value} = event.target;
+        const {name, value} = event.target
         setPost( (prev) => {
             return {
                 ...prev,

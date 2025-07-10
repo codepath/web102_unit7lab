@@ -1,4 +1,3 @@
-import React from 'react'
 import { useState } from 'react'
 import './Card.css'
 import more from './more.png'
@@ -9,7 +8,7 @@ const Card = (props) =>  {
 
   const [count, setCount] = useState(0)
   const updateCount = () => {
-    setCount((count) => count + 1);
+    setCount((count) => count + 1)
   }
 
   return (
@@ -23,4 +22,4 @@ const Card = (props) =>  {
   );
 };
 
-export default Card;
+export default Card
