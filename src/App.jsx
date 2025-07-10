@@ -29,7 +29,7 @@ const App = () => {
       'author':'Denise Michelle', 
       'description':descr},
   ]
- 
+
 
   // Sets up routes
   let element = useRoutes([
@@ -59,7 +59,7 @@ const App = () => {
         {element}
     </div>
 
-  );
+  )
 }
 
-export default App;
+export default App
